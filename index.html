@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERROR — Discord Bot</title>
+  <meta name="description" content="ERROR is a modern multipurpose Discord bot for moderation, utility and community management.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-mark glitch" data-text="ERROR">ERROR</div>
+    <div class="loader-line"><span></span></div>
+    <small>INITIALIZING SYSTEM</small>
+  </div>
+
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+  <div class="cursor-glow"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#home">
+      <img src="assets/error-logo.jpg" alt="ERROR logo">
+      <span>ERROR</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#commands">Commands</a>
+      <a href="#premium">Premium</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-button" href="https://discord.com/oauth2/authorize?client_id=1524793122435891200&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener">Invite Bot</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-orbit orbit-one"></div>
+      <div class="hero-orbit orbit-two"></div>
+
+      <div class="hero-copy reveal">
+        <div class="status-pill"><i></i> SYSTEM ONLINE</div>
+        <p class="kicker">MULTIPURPOSE DISCORD BOT</p>
+        <h1>
+          <span class="glitch" data-text="ERROR">ERROR</span>
+          <small>controls the chaos.</small>
+        </h1>
+        <p class="hero-description">
+          Powerful moderation, useful tools and community features built for modern Discord servers.
+        </p>
+        <div class="actions">
+          <a class="button primary magnetic" href="https://discord.com/oauth2/authorize?client_id=1524793122435891200&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener">
+            <span>Add to Discord</span><b>↗</b>
+          </a>
+          <a class="button secondary magnetic" href="https://discord.gg/dGRKWjBcTh" target="_blank" rel="noopener">
+            <span>Support Server</span>
+          </a>
+        </div>
+
+        <div class="mini-stats">
+          <div><strong data-count="100">0</strong><span>Servers</span></div>
+          <div><strong data-count="2500">0</strong><span>Users</span></div>
+          <div><strong data-count="30">0</strong><span>Commands</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="bot-card tilt-card">
+          <div class="card-top">
+            <div class="profile">
+              <img src="assets/error-logo.jpg" alt="ERROR bot avatar">
+              <div>
+                <strong>ERROR</strong>
+                <span><i></i> Online</span>
+              </div>
+            </div>
+            <div class="verified">✓ BOT</div>
+          </div>
+
+          <div class="terminal">
+            <div class="terminal-head">
+              <span></span><span></span><span></span>
+              <p>error-system.exe</p>
+            </div>
+            <div class="terminal-body">
+              <p><b>$</b> /server status</p>
+              <p class="success">✓ Protection active</p>
+              <p class="success">✓ Automod enabled</p>
+              <p class="success">✓ Commands synchronized</p>
+              <p><b>$</b> <span class="typing"></span></p>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span>Latency</span><b>24 ms</b>
+            <span>Uptime</span><b>99.9%</b>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#features"><span></span>SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="logo-strip">
+      <span>MODERATION</span><i>✦</i>
+      <span>UTILITY</span><i>✦</i>
+      <span>SECURITY</span><i>✦</i>
+      <span>COMMUNITY</span><i>✦</i>
+      <span>AUTOMATION</span>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading reveal">
+        <div>
+          <p class="kicker">CORE FEATURES</p>
+          <h2>Built to run your server.</h2>
+        </div>
+        <p>One powerful system for moderation, utilities, engagement and server automation.</p>
+      </div>
+
+      <div class="bento">
+        <article class="feature large reveal">
+          <span class="number">01</span>
+          <div class="feature-icon shield">◇</div>
+          <h3>Advanced moderation</h3>
+          <p>Protect your community using warnings, filters, bans, kicks, logs and automatic moderation tools.</p>
+          <div class="moderation-demo">
+            <span>Spam protection</span><b>ACTIVE</b>
+            <span>Raid detection</span><b>ACTIVE</b>
+            <span>Bad words filter</span><b>ACTIVE</b>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <span class="number">02</span>
+          <div class="feature-icon">⌁</div>
+          <h3>Lightning fast</h3>
+          <p>Optimized commands with fast responses and reliable performance.</p>
+          <div class="speed-ring"><strong>24</strong><span>ms</span></div>
+        </article>
+
+        <article class="feature reveal">
+          <span class="number">03</span>
+          <div class="feature-icon">⌘</div>
+          <h3>Slash commands</h3>
+          <p>Clean and simple commands that everybody can understand.</p>
+          <div class="slash-demo"><span>/</span><p>Type a command...</p></div>
+        </article>
+
+        <article class="feature wide reveal">
+          <span class="number">04</span>
+          <div>
+            <div class="feature-icon">◎</div>
+            <h3>Community engagement</h3>
+            <p>Polls, games, welcome messages and fun commands to keep members active.</p>
+          </div>
+          <div class="activity-chart">
+            <i style="height:30%"></i><i style="height:50%"></i><i style="height:42%"></i>
+            <i style="height:70%"></i><i style="height:58%"></i><i style="height:88%"></i>
+            <i style="height:100%"></i><i style="height:76%"></i><i style="height:92%"></i>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section commands-section" id="commands">
+      <div class="section-heading reveal">
+        <div>
+          <p class="kicker">COMMAND CENTER</p>
+          <h2>Simple commands.<br>Serious power.</h2>
+        </div>
+        <p>Use slash commands directly inside Discord. No complicated setup required.</p>
+      </div>
+
+      <div class="command-shell reveal">
+        <aside>
+          <button class="command-tab active" data-target="moderation">◇ Moderation</button>
+          <button class="command-tab" data-target="utility">⌁ Utility</button>
+          <button class="command-tab" data-target="community">◎ Community</button>
+          <button class="command-tab" data-target="information">i Information</button>
+        </aside>
+
+        <div class="command-content active" id="moderation">
+          <div class="command-row"><code>/ban</code><p>Ban a member from your server.</p><span>Moderation</span></div>
+          <div class="command-row"><code>/kick</code><p>Remove a member from the server.</p><span>Moderation</span></div>
+          <div class="command-row"><code>/warn</code><p>Warn a member and save the reason.</p><span>Moderation</span></div>
+          <div class="command-row"><code>/clear</code><p>Delete multiple messages instantly.</p><span>Moderation</span></div>
+        </div>
+
+        <div class="command-content" id="utility">
+          <div class="command-row"><code>/poll</code><p>Create an interactive server poll.</p><span>Utility</span></div>
+          <div class="command-row"><code>/avatar</code><p>Display a member's avatar.</p><span>Utility</span></div>
+          <div class="command-row"><code>/remind</code><p>Create a personal reminder.</p><span>Utility</span></div>
+          <div class="command-row"><code>/role</code><p>Manage server roles quickly.</p><span>Utility</span></div>
+        </div>
+
+        <div class="command-content" id="community">
+          <div class="command-row"><code>/8ball</code><p>Ask the magic ball a question.</p><span>Fun</span></div>
+          <div class="command-row"><code>/coinflip</code><p>Flip a virtual coin.</p><span>Fun</span></div>
+          <div class="command-row"><code>/dice</code><p>Roll a virtual dice.</p><span>Fun</span></div>
+          <div class="command-row"><code>/meme</code><p>Send a random community meme.</p><span>Fun</span></div>
+        </div>
+
+        <div class="command-content" id="information">
+          <div class="command-row"><code>/serverinfo</code><p>Display server information.</p><span>Info</span></div>
+          <div class="command-row"><code>/userinfo</code><p>Display member information.</p><span>Info</span></div>
+          <div class="command-row"><code>/botinfo</code><p>See ERROR system details.</p><span>Info</span></div>
+          <div class="command-row"><code>/ping</code><p>Check the current bot latency.</p><span>Info</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section premium" id="premium">
+      <div class="premium-panel reveal">
+        <div class="premium-copy">
+          <p class="kicker">ERROR PREMIUM</p>
+          <h2>Unlock the full system.</h2>
+          <p>More customization, higher limits and advanced server tools for serious communities.</p>
+          <ul>
+            <li>✓ Advanced automod configuration</li>
+            <li>✓ Custom welcome and goodbye messages</li>
+            <li>✓ Premium support and early features</li>
+            <li>✓ Extended logs and server analytics</li>
+          </ul>
+          <a class="button primary" href="https://discord.gg/dGRKWjBcTh" target="_blank" rel="noopener">Learn on Discord</a>
+        </div>
+        <div class="premium-card">
+          <span>PREMIUM ACCESS</span>
+          <h3>ERROR<span>+</span></h3>
+          <div class="premium-logo"><img src="assets/error-logo.jpg" alt=""></div>
+          <p>Upgrade your server experience.</p>
+          <div class="card-code">1524 • 4886 • ERROR</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-heading reveal">
+        <div>
+          <p class="kicker">FAQ</p>
+          <h2>Questions answered.</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="reveal"><summary>Is ERROR free to use?</summary><p>Yes. The core bot features are free. Premium features can be added later.</p></details>
+        <details class="reveal"><summary>How do I add ERROR to my server?</summary><p>Click “Add to Discord”, choose your server and approve the requested permissions.</p></details>
+        <details class="reveal"><summary>Why does ERROR request Administrator?</summary><p>The current invite requests Administrator so all bot features can work. You can later reduce permissions according to the commands your bot actually uses.</p></details>
+        <details class="reveal"><summary>Where can I ask for help?</summary><p>Join the official support server using the support button.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="cta-glow"></div>
+      <div class="reveal">
+        <img src="assets/error-logo.jpg" alt="ERROR">
+        <p class="kicker">SYSTEM READY</p>
+        <h2>Ready to upgrade<br>your Discord server?</h2>
+        <div class="actions">
+          <a class="button primary" href="https://discord.com/oauth2/authorize?client_id=1524793122435891200&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener">Invite ERROR <b>↗</b></a>
+          <a class="button secondary" href="https://discord.gg/dGRKWjBcTh" target="_blank" rel="noopener">Join Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home"><img src="assets/error-logo.jpg" alt=""><span>ERROR</span></a>
+    <p>© <span id="year"></span> ERROR System. All rights reserved.</p>
+    <div><a href="https://discord.com/oauth2/authorize?client_id=1524793122435891200&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener">Invite</a><a href="https://discord.gg/dGRKWjBcTh" target="_blank" rel="noopener">Discord</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
