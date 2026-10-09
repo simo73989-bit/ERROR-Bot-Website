@@ -33,7 +33,7 @@ jobs:
           cp native-android/AndroidManifest.xml android-app/app/src/main/AndroidManifest.xml
           cp native-android/build.gradle android-app/app/build.gradle
           mkdir -p android-app/app/src/main/res/drawable
-          cp android-app/app/src/main/assets/error_logo_transparent.png android-app/app/src/main/res/drawable/error_logo.png
+          cp android-app/app/src/main/assets/assets/error_logo_transparent.png android-app/app/src/main/res/drawable/error_logo.png
           test ! -e android-app/app/src/main/assets/index.html || echo "Legacy web assets ignored by native Activity"
       - name: Build installable APK
         working-directory: android-app
