@@ -1,0 +1,17 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'com.error.messenger'
+ compileSdk 35
+ defaultConfig {
+  applicationId 'com.error.messenger'
+  minSdk 26
+  targetSdk 34
+  versionCode 3
+  versionName '0.3-native-beta'
+ }
+ compileOptions {
+  sourceCompatibility JavaVersion.VERSION_17
+  targetCompatibility JavaVersion.VERSION_17
+ }
+}
+dependencies { implementation 'com.google.android.gms:play-services-nearby:19.5.0' }
