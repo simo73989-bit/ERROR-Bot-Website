@@ -1,0 +1,42 @@
+name: ERROR Messenger Public Android APK
+on:
+  push:
+    branches:
+      - error-messenger-apk-public
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android SDK
+        run: |
+          SDKMGR="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n1)"
+          "$SDKMGR" "platforms;android-35" "build-tools;35.0.0"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Extract ERROR messenger source
+        run: |
+          mkdir android-app
+          base64 --decode ERROR_android_source.b64 | tar -xz -C android-app
+      - name: Build installable APK
+        working-directory: android-app
+        run: gradle :app:assembleDebug --stacktrace --no-daemon
+      - name: Publish public APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "error-messenger-android-test-v0.1-public" \
+            "android-app/app/build/outputs/apk/debug/app-debug.apk#ERROR-Android-Test.apk" \
+            --target "$GITHUB_SHA" \
+            --title "ERROR Messenger Android - Test v0.1" \
+            --notes "Public APK for ERROR Messenger Android. Test build only; real offline messaging between phones is not yet verified. Online Firebase not configured." \
+            --prerelease
