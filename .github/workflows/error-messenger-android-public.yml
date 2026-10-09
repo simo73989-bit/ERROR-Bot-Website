@@ -42,9 +42,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "error-messenger-native-v0.3-public" \
-            "android-app/app/build/outputs/apk/debug/app-debug.apk#ERROR-Native-Android-v0.3.apk" \
+          gh release create "error-messenger-native-v0.3.1-public" \
+            "android-app/app/build/outputs/apk/debug/app-debug.apk#ERROR-Native-Android-v0.3.1.apk" \
             --target "$GITHUB_SHA" \
-            --title "ERROR Messenger - Native Android v0.3" \
+            --title "ERROR Messenger - Native Android v0.3.1" \
             --notes "Fully native Android Activity, not WebView. Nearby messaging, photos and voice code; requires testing on two real phones. Online backend is not configured. Uninstall previous ERROR test APK before installation due to debug signing differences." \
             --prerelease
