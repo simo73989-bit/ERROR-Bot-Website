@@ -27,6 +27,12 @@ jobs:
         run: |
           mkdir android-app
           base64 --decode ERROR_android_source.b64 | tar -xz -C android-app
+      - name: Replace WebView with native Android
+        run: |
+          cp native-android/MainActivity.java android-app/app/src/main/java/com/error/messenger/MainActivity.java
+          cp native-android/AndroidManifest.xml android-app/app/src/main/AndroidManifest.xml
+          cp native-android/build.gradle android-app/app/build.gradle
+          test ! -e android-app/app/src/main/assets/index.html || echo "Legacy web assets ignored by native Activity"
       - name: Build installable APK
         working-directory: android-app
         run: gradle :app:assembleDebug --stacktrace --no-daemon
@@ -34,9 +40,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "error-messenger-android-test-v0.1-public" \
-            "android-app/app/build/outputs/apk/debug/app-debug.apk#ERROR-Android-Test.apk" \
+          gh release create "error-messenger-native-v0.3-public" \
+            "android-app/app/build/outputs/apk/debug/app-debug.apk#ERROR-Native-Android-v0.3.apk" \
             --target "$GITHUB_SHA" \
-            --title "ERROR Messenger Android - Test v0.1" \
-            --notes "Public APK for ERROR Messenger Android. Test build only; real offline messaging between phones is not yet verified. Online Firebase not configured." \
+            --title "ERROR Messenger - Native Android v0.3" \
+            --notes "Fully native Android Activity, not WebView. Nearby messaging, photos and voice code; requires testing on two real phones. Online backend is not configured. Uninstall previous ERROR test APK before installation due to debug signing differences." \
             --prerelease
