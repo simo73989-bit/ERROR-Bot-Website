@@ -93,7 +93,7 @@ public class MainActivity extends Activity {
     LinearLayout v=col();pad(v,20,20,20,12);add(v,text(title,25,WHITE,true));gap(v,5);add(v,text(desc,13,GRAY,false));add(body,v);
   }
   void welcome(){screen();LinearLayout box=col();box.setGravity(Gravity.CENTER);pad(box,25,20,25,25);stretch(root,box);
-    ImageView im=logo();add(box,im);gap(box,30);TextView a=text("Bienvenue sur ERROR",25,WHITE,true);a.setGravity(Gravity.CENTER);add(box,a);
+    ImageView im=logo();box.addView(im,new LinearLayout.LayoutParams(-1,dp(105)));gap(box,30);TextView a=text("Bienvenue sur ERROR",25,WHITE,true);a.setGravity(Gravity.CENTER);add(box,a);
     gap(box,12);TextView d=text("Messagerie Android · Sans Internet à proximité",13,GRAY,false);d.setGravity(Gravity.CENTER);add(box,d);
     gap(box,34);EditText name=field("Votre pseudo");add(box,name);gap(box,12);add(box,button("Commencer →",true,()->{String n=name.getText().toString().trim();if(n.length()<2){name.setError("2 caractères minimum");return;}myName=n;prefs.edit().putString("name",n).apply();render();}));
   }
